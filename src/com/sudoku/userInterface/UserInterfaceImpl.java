@@ -172,6 +172,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View,
 
         boardBackground.setWidth(BOARD_X_AND_Y);
         boardBackground.setHeight(BOARD_X_AND_Y);
+
         boardBackground.setFill(BOARD_BACKGROUND_COLOR);
         root.getChildren().add(boardBackground);
     }

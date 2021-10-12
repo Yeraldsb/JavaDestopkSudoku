@@ -1,17 +1,20 @@
 package com.sudoku.problemDomain;
 
+import com.sudoku.computationlogic.SudokuUtilities;
 import com.sudoku.constants.GameState;
 
 import java.io.Serializable;
 
-public class SudokuGame implements Serializable {
 
+public class SudokuGame implements Serializable {
     private final GameState gameState;
     private final int[][] gridState;
 
-    public static final int GRID_BOUNDARY =9;
 
-    public SudokuGame(GameState gameState, int[][] gridState, int[][] gridState1){
+    public static final int GRID_BOUNDARY = 9;
+
+
+    public SudokuGame(GameState gameState, int[][] gridState) {
         this.gameState = gameState;
         this.gridState = gridState;
     }
@@ -20,8 +23,8 @@ public class SudokuGame implements Serializable {
         return gameState;
     }
 
-    public int[][] getCopyOfGridState(){
-        return gridState;
+    public int[][] getCopyOfGridState() {
+        return SudokuUtilities.copyToNewArray(gridState);
     }
-}
 
+}
